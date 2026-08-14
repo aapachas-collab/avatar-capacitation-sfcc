@@ -1,0 +1,7 @@
+<div class="curso-slot">
+    <isloop items="${slotcontent.content}" var="elemento">
+        <div class="curso-slot-item">
+            <isprint value="${elemento.custom.body}" encoding="off"/>
+        </div>
+    </isloop>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>${pdict.titulo}</title>
+</head>
+<body>
+    <h1>${Resource.msg('curso.inicio.titulo', 'curso', null)}</h1>
+
+    <isset name="totalProductos" value="${pdict.productos.length}" scope="page"/>
+
+    <isif condition="${totalProductos > 0}">
+        <isscript>
+            var etiquetaCantidad = totalProductos === 1 ? 'curso.inicio.unproducto' : 'curso.inicio.variosproductos';
+        </isscript>
+        <p>${Resource.msg(etiquetaCantidad, 'curso', null)}</p>
+
+        <ul>
+            <isloop items="${pdict.productos}" var="producto" status="loopState">
+                <li>
+                    ${loopState.count}. ${producto.nombre} -
+                    ${Resource.msg('curso.inicio.moneda', 'curso', null)}
+                    <isprint value="${producto.precio}" formatter="###,##0.00"/>
+                </li>
+            </isloop>
+        </ul>
+
+        <p>
+            ${Resource.msg('curso.inicio.total', 'curso', null)}:
+            ${Resource.msg('curso.inicio.moneda', 'curso', null)}
+            <isprint value="${pdict.total}" formatter="###,##0.00"/>
+        </p>
+    <iselse/>
+        <p>${Resource.msg('curso.inicio.sinproductos', 'curso', null)}</p>
+    </isif>
+
+    <p>
+        ${Resource.msg('curso.inicio.generado', 'curso', null)}
+        <isprint value="${pdict.fecha}" formatter="dd MMMM yyyy"/>
+    </p>
+
+    <isinclude template="curso/incluido"/>
+</body>
+</html>

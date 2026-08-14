@@ -1,0 +1,8 @@
+{
+  "hostname": "tu-sandbox.dx.commercecloud.salesforce.com",
+  "username": "tu-usuario",
+  "password": "tu-password",
+  "code-version": "version1",
+  "cartridge": ["plugin_training", "app_storefront_base", "modules"],
+  "cartridgesPath": "plugin_training:app_storefront_base:modules"
+}

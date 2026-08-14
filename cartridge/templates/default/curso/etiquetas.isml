@@ -1,0 +1,13 @@
+<isinclude template="curso/modules"/>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>${Resource.msg('curso.etiquetas.titulo', 'curso', null)}</title>
+</head>
+<body>
+    <issaludo nombre="${'Alejandro'}"/>
+    <issaludo/>
+</body>
+</html>

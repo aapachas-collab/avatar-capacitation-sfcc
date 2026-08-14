@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>${pdict.titulo}</title>
+</head>
+<body>
+    <h1>${Resource.msg('curso.inicio.titulo', 'curso', null)}</h1>
+
+    <ul>
+        <isloop items="${pdict.productos}" var="producto" status="loopState">
+            <li>
+                ${loopState.count}. ${producto.nombre} -
+                ${Resource.msg('curso.inicio.moneda', 'curso', null)}
+                <isprint value="${producto.precio}" formatter="###,##0.00"/>
+            </li>
+        </isloop>
+    </ul>
+
+    <isinclude template="curso/incluido"/>
+</body>
+</html>

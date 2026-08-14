@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "prophet",
+      "request": "launch",
+      "name": "Sandbox - plugin_training",
+      "hostname": "tu-sandbox.dx.commercecloud.salesforce.com",
+      "username": "tu-usuario",
+      "password": "tu-password",
+      "codeversion": "version1",
+      "cartridgeroot": "auto",
+      "trace": false
+    }
+  ]
+}

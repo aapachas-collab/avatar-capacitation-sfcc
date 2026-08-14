@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>${Resource.msg('curso.formulario.titulo', 'curso', null)}</title>
+</head>
+<body>
+    <form action="${URLUtils.url('CursoFormulario-Enviar')}" method="POST" id="curso-formulario"
+        <isprint value="${pdict.curso.attributes}" encoding="off"/>>
+
+        <div class="form-group ${pdict.curso.nombre.mandatory === true ? 'required' : ''}">
+            <label for="nombre">
+                <isprint value="${pdict.curso.nombre.label}" encoding="htmlcontent"/>
+            </label>
+            <input type="text" id="nombre"
+                <isprint value="${pdict.curso.nombre.attributes}" encoding="off"/>/>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-group ${pdict.curso.correo.mandatory === true ? 'required' : ''}">
+            <label for="correo">
+                <isprint value="${pdict.curso.correo.label}" encoding="htmlcontent"/>
+            </label>
+            <input type="email" id="correo"
+                <isprint value="${pdict.curso.correo.attributes}" encoding="off"/>/>
+            <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">
+                <isprint value="${pdict.curso.mensaje.label}" encoding="htmlcontent"/>
+            </label>
+            <textarea id="mensaje"
+                <isprint value="${pdict.curso.mensaje.attributes}" encoding="off"/>></textarea>
+        </div>
+
+        <button type="submit" name="${pdict.curso.enviar.htmlName}">
+            ${Resource.msg('curso.forms.enviar', 'curso', null)}
+        </button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<isdecorate template="curso/decorador">
+    <h1>${pdict.titulo}</h1>
+    <p>${Resource.msg('curso.pagina.texto', 'curso', null)}</p>
+</isdecorate>

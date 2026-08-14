@@ -1,0 +1,4 @@
+dw.json
+node_modules/
+*.log
+.DS_Store

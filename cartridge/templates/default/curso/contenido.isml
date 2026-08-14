@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <title>${Resource.msg('curso.contenido.titulo', 'curso', null)}</title>
+</head>
+<body>
+    <section>
+        <iscontentasset aid="curso-banner"/>
+    </section>
+
+    <section>
+        <isslot id="curso-inicio-slot" context="global" description="Slot de bienvenida del curso"/>
+    </section>
+</body>
+</html>

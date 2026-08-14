@@ -1,0 +1,5 @@
+<isif condition="${nombre}">
+    <strong>${Resource.msgf('curso.saludo.nombre', 'curso', null, nombre)}</strong>
+<iselse/>
+    <strong>${Resource.msg('curso.saludo.anonimo', 'curso', null)}</strong>
+</isif>

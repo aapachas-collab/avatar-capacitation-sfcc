@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="catalogo-curso">
+    <category category-id="curso-audio">
+        <display-name xml:lang="es">Audio</display-name>
+        <online-flag>true</online-flag>
+    </category>
+
+    <product product-id="curso-audifono-basico">
+        <display-name xml:lang="es">Audifono Basico</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+    </product>
+
+    <product product-id="curso-audifono-negro">
+        <display-name xml:lang="es">Audifono Bluetooth Negro</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+    </product>
+
+    <product product-id="curso-audifono-blanco">
+        <display-name xml:lang="es">Audifono Bluetooth Blanco</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>false</searchable-flag>
+    </product>
+
+    <product product-id="curso-audifono-master">
+        <display-name xml:lang="es">Audifono Bluetooth</display-name>
+        <online-flag>true</online-flag>
+        <searchable-flag>true</searchable-flag>
+        <variations>
+            <attributes>
+                <variation-attribute variation-id="color" attribute-id="color" default-variation-attribute-value="negro">
+                    <variation-attribute-values>
+                        <variation-attribute-value value="negro">
+                            <display-value xml:lang="es">Negro</display-value>
+                        </variation-attribute-value>
+                        <variation-attribute-value value="blanco">
+                            <display-value xml:lang="es">Blanco</display-value>
+                        </variation-attribute-value>
+                    </variation-attribute-values>
+                </variation-attribute>
+            </attributes>
+            <variants>
+                <variant product-id="curso-audifono-negro"/>
+                <variant product-id="curso-audifono-blanco"/>
+            </variants>
+        </variations>
+    </product>
+
+    <product product-id="curso-combo-audio">
+        <display-name xml:lang="es">Combo de Audio</display-name>
+        <online-flag>true</online-flag>
+        <bundled-products>
+            <bundled-product product-id="curso-audifono-basico">
+                <quantity>1</quantity>
+            </bundled-product>
+            <bundled-product product-id="curso-audifono-master">
+                <quantity>1</quantity>
+            </bundled-product>
+        </bundled-products>
+    </product>
+
+    <product product-id="curso-set-audio">
+        <display-name xml:lang="es">Set de Audio</display-name>
+        <online-flag>true</online-flag>
+        <product-set-products>
+            <product-set-product product-id="curso-audifono-basico"/>
+            <product-set-product product-id="curso-audifono-master"/>
+        </product-set-products>
+    </product>
+
+    <product product-id="curso-audifono-grabado">
+        <display-name xml:lang="es">Audifono con Grabado</display-name>
+        <online-flag>true</online-flag>
+        <option-product option-id="curso-grabado">
+            <default-option-value-id>sin-grabado</default-option-value-id>
+        </option-product>
+    </product>
+
+    <category-assignment category-id="curso-audio" product-id="curso-audifono-basico"/>
+    <category-assignment category-id="curso-audio" product-id="curso-audifono-master"/>
+    <category-assignment category-id="curso-audio" product-id="curso-combo-audio"/>
+    <category-assignment category-id="curso-audio" product-id="curso-set-audio"/>
+    <category-assignment category-id="curso-audio" product-id="curso-audifono-grabado"/>
+</catalog>

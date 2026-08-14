@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2006-01-12">
+
+    <field formid="nombre" label="curso.forms.nombre" type="string" mandatory="true"
+           max-length="50" missing-error="curso.forms.nombre.missing"/>
+
+    <field formid="correo" label="curso.forms.correo" type="string" mandatory="true"
+           regexp="^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$"
+           missing-error="curso.forms.correo.missing"
+           parse-error="curso.forms.correo.invalid"/>
+
+    <field formid="mensaje" label="curso.forms.mensaje" type="string" mandatory="false"
+           max-length="500"/>
+
+    <action formid="enviar" valid-form="true"/>
+</form>
